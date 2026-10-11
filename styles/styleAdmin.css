@@ -1,0 +1,684 @@
+/* Management downstairs...*/
+
+.admin-management {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 15px;
+    background-color: #e1e2e7;
+    border-radius: 12px;
+}
+
+.admin-management-menu {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-management-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #20212d;
+    padding: 10px 12px 20px 12px;
+}
+
+.management-tab {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    background-color: white;
+    color: #20212d;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.management-tab:hover {
+    background-color: #e8edf3;
+    color: #20212d;
+}
+
+.management-tab.active {
+    background-color: #4A5D73;
+    color: white;
+}
+
+.admin-management-content {
+     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    overflow: hidden;
+}
+
+/* The wrapper surrounds the table only.
+   Headings and search/filter forms stay outside the scroll area. */
+.management-scroll-region {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Long tables scroll vertically inside their own area.
+   Short tables use only the space they need. */
+.management-table-scroll {
+    max-height: 65vh;
+    overflow: auto;
+    overscroll-behavior: contain;
+    margin-bottom: 24px;
+}
+
+/* Keep column headings visible while scrolling through table rows. */
+.management-table-scroll thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+}
+
+/* Allow wide tables to use their natural width and scroll horizontally. */
+.management-scroll-region table {
+    width: max-content !important;
+    min-width: max-content !important;
+    table-layout: auto !important;
+}
+
+.management-scroll-region th,
+.management-scroll-region td {
+    white-space: nowrap;
+}
+
+.management-scroll-region {
+    min-width: 0;
+    overflow-x: auto;
+}
+.admin-management-content form {
+    margin-bottom: 16px;
+}
+
+/* Shared appearance for every management table */
+
+.admin-management-content .management-table-scroll {
+    border-radius: 10px;
+}
+
+.admin-management-content table.management-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.management-scroll-region table.management-table {
+    margin: 0;
+    border-collapse: collapse;
+    color: #20212d;
+}
+
+.management-scroll-region table.management-table th,
+.management-scroll-region table.management-table td {
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Tables with many columns stay wide and scroll inside their wrapper */
+.management-scroll-region table.management-table--wide {
+    width: max-content !important;
+    min-width: max-content !important;
+    table-layout: auto !important;
+}
+
+.management-scroll-region table.management-table--wide th,
+.management-scroll-region table.management-table--wide td {
+    white-space: nowrap;
+}
+/* Fill the panel; truncate long cell values */
+.management-scroll-region table.management-table--fill {
+    width: 100% !important;
+    min-width: 100% !important;
+    table-layout: fixed !important;
+}
+
+.management-scroll-region table.management-table--fill th,
+.management-scroll-region table.management-table--fill td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.management-scroll-region table.management-table--fit {
+    width: 100% !important;
+    min-width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse;
+}
+
+.management-scroll-region table.management-table--fit th,
+.management-scroll-region table.management-table--fit td {
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.management-scroll-region table.management-table--fit th:nth-child(1) { width: 12%; }
+.management-scroll-region table.management-table--fit th:nth-child(2) { width: 36%; }
+.management-scroll-region table.management-table--fit th:nth-child(3) { width: 20%; }
+.management-scroll-region table.management-table--fit th:nth-child(4) { width: 14%; }
+.management-scroll-region table.management-table--fit th:nth-child(5) { width: 18%; }
+
+/* Main Header */
+h1 {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* The body of the page outside of the header and footer */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(214, 239, 121);
+    background-position: center;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* header itself*/
+
+header {
+    background: #e1e2e7;
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+   
+    display: flex;
+    align-items: center;
+}
+
+
+header h1 a {
+    text-decoration: none;
+}
+
+
+
+/*Nav part of the Header*/
+
+nav {
+    margin-left: 100px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav button {
+    margin: 0;
+    padding: 8px 12px;
+    height: 45px;
+    white-space: nowrap;
+}
+
+/* Navigation button containers */
+
+.report_button,
+.us_button,
+.neuro_button,
+.appointment_button {
+    margin: 0;
+    padding: 0;
+}
+
+/*Positioning dropdown*/
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /*shows where it should be positioned*/
+}
+
+.dropdown-btn {
+    background: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*The box itself*/
+}
+
+.dropdown-btn img {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Main/Body */
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* APPOINTMENT TABLE */
+
+.table-slider-container {
+    margin: 30px auto 0 auto;
+    padding: 25px;
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #4e7fb8;
+    border-radius: 10px;
+}
+
+caption{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.table-slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.table-slide {
+    min-width: 100%;
+    width: 100%;
+    max-height: 400px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 0 20px;
+    overscroll-behavior: contain;
+}
+
+.table-slide table {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.table-slide th,
+.table-slide td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #20212d;
+    white-space: nowrap;
+}
+
+.table-slide th {
+    background-color: #4A5D73;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.table-slide tr {
+    background-color: #20212d;
+    color: #D9D9D9;
+}
+
+.table-slide tr:hover {
+    background-color: #4A5D73;
+}
+
+.table-slide tr:nth-child(even) {
+    background-color: #222;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.leftNextDisplayForRecent {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+}
+
+.rightNextDisplayForRecent {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    transform: rotate(45deg);
+}
+
+caption{
+    padding-bottom: 10px;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #4A5D73;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4e7fb8;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #767aa5;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 130px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.footer-contact {
+    text-align: left;
+    margin-top: 25px;
+    flex-grow: 1;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    font-size: small;
+    font-weight: bold;
+    transform: translateY(-20px);
+    color: rgb(110, 124, 124);
+}
+
+.footer-logo {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 320px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .admin-management {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-management-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .admin-management-title {
+        flex-basis: 100%;
+    }
+
+    .management-tab {
+        width: auto;
+        flex: 1 1 150px;
+    }
+}
+@keyframes managementTableEnter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-management-content.management-content-enter {
+    animation: managementTableEnter 220ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .admin-management-content.management-content-enter {
+        animation: none;
+    }
+}
+
+/* Modern management filters */
+.admin-management-content form select {
+    min-width: 180px;
+    min-height: 44px;
+    padding: 10px 38px 10px 14px;
+    border: 1px solid rgba(74, 93, 115, 0.3);
+    border-radius: 8px;
+    background-color: rgba(74, 93, 115, 0.12);
+    color: #20212d;
+    font: inherit;
+    cursor: pointer;
+    appearance: none;
+
+    /* Custom dropdown arrow */
+    background-image:
+        linear-gradient(45deg, transparent 50%, #4A5D73 50%),
+        linear-gradient(135deg, #4A5D73 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 12px) 50%;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.admin-management-content form select:hover {
+    background-color: rgba(74, 93, 115, 0.2);
+}
+
+.admin-management-content form button[type="submit"] {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    background-color: rgba(74, 93, 115, 0.75);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.admin-management-content form button[type="submit"]:hover {
+    background-color: rgba(74, 93, 115, 0.95);
+    transform: translateY(-1px);
+}
+
+.admin-management-content form select:focus-visible,
+.admin-management-content form button[type="submit"]:focus-visible {
+    outline: 3px solid rgba(74, 93, 115, 0.35);
+    outline-offset: 2px;
+}
+
+.admin-management-content form select option {
+    background: white;
+    color: #20212d;
+}
+
+/* Rounded edges for the management table scroll area */
+.admin-management-content .management-table-scroll {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: white;
+}
+
+/* Separate borders let the table and its corners round correctly */
+.admin-management-content .management-table-scroll > table.management-table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Avoid doubled borders between neighboring cells */
+.admin-management-content .management-table-scroll th,
+.admin-management-content .management-table-scroll td {
+    border: 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Let the wrapper draw the table's outside border */
+.admin-management-content .management-table-scroll tr > :first-child {
+    border-left: 0;
+}
+
+.admin-management-content .management-table-scroll tbody tr:last-child > td {
+    border-bottom: 0;
+}
+
+/* Round the visible corner cells */
+.admin-management-content .management-table-scroll thead tr:first-child th:first-child {
+    border-top-left-radius: 9px;
+}
+
+.admin-management-content .management-table-scroll thead tr:first-child th:last-child {
+    border-top-right-radius: 9px;
+}
+
+.admin-management-content .management-table-scroll tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 9px;
+}
+
+.admin-management-content .management-table-scroll tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 9px;
+}
+/* Round the outside corners of the table slider's header row */
+.table-slider-container .table-slide table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.table-slider-container .table-slide table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurodivergent (logged in) - Booking</title>
+
+    <link rel="stylesheet" href="../styles/styleBook.css">
+</head>
+
+<body>
+
+<header>
+<h1>
+<a href="HomePage.html">
+    <img src="../img/neurodivergence.png" alt="Login Page" width="250">
+</a>
+
+
+
+<nav>
+  <div class="report_button">
+    <button class="Report" style="background-color: red;">
+      <a href="Report.html" style="font-size: larger;">REPORT</a>
+    </button>
+  </div>
+ <div class="us_button">
+  <button class="AboutUs" style="margin: auto;">
+   <a href="AboutUs.html" style="font-size: larger;">ABOUT US</a>
+  </button>
+ </div>
+
+<div class="neuro_button">
+  <button class="Neurodivergent">
+   <a href="Autism.html" style="font-size: larger;">NEURODIVERGENT</a>
+  </button>
+ </div>
+
+ <div class="appointment_button">
+  <button class="appointments">
+<a href="AutismBooker.php" style="font-size: larger;">APPOINTMENTS</a>
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn">
+     <a href= "LoginPage.html"> <img src="../img/login.png" alt="Login Page" width="70" height="70"></a>
+</button>
+<div class="dropdown-content">
+      <a href="Updates.html">Updates</a>
+      <a href="#settings">History</a>
+      <a href="Prescriptions.html">Prescriptions</a>
+      <a href="#logout">Log Out</a>
+    </div>
+  </div>
+
+</a>
+
+</nav>
+
+</h1>
+
+</header>
+
+
+<main>
+    <form class="book_Disp" id="accountForm">
+        <div class="book-header">
+            <div class="booking-bigtext">
+                BOOKING APPOINTMENT:
+            </div>
+            <input
+                type="text"
+                id="accountID"
+                name="accountID"
+                value="ACC001"
+                readonly
+            >
+
+        </div>
+
+
+        <div class="book-content">
+
+
+            <div class="book-column">
+
+                <div class="user_ID">
+                <div class="form-row">
+                    <label for="name">ID:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="John Doe"
+                        readonly
+                    >
+                </div>
+                </div>
+            <div class="user_NameAndEmail">
+              <div class="form-row">
+                    <label for="birthDate">NAME:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="John Doe"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <label for="gender">EMAIL:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="John Doe"
+                        readonly
+                    >
+                </div>
+            </div>
+
+              <div class="book-column">
+
+
+                <div class="book_Doctor">
+                  <div class="form-row">
+                    <label for="email">DOCTOR:</label>
+
+                    <select id="doctor" name="psychiatrist" disabled>
+                        <option value="BrHd" selected>Dr. Bryan Hodukavich</option>
+                        <option value="AnAd">Dr. Anna Adams</option>
+                    </select>
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="book-column">
+
+              <div class="book_DateAndMedia">
+                <div class="form-row">
+                    <label for="role">DATE:</label>
+
+                    <input
+                        type="date"
+                        id="birthDate"
+                        name="birthDate"
+                        value="2000-01-01"
+                        readonly
+                    >
+                </div>
+
+                <div class="form-row">
+                    <label for="password">MEDIA:</label>
+
+                    <select id="gender" name="gender" disabled>
+                        <option value="Physical" selected>Physically</option>
+                        <option value="Non-verbal">Non-verbal</option>
+                        <option value="Digital">Digitally</option>
+                    </select>
+                </div>
+              </div>
+           </div>
+
+              <div class="descBook">
+                <div class="form-row">
+
+                    <label for="descriptionBooking">
+                        DESCRIPTIONS:
+                    </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="lorem ipsum dolor sit amet consectetur adipiscing elit est et accusamus voluptate dolore et exercitation ullamco fuga voluptas est occaecat iusto culpa velit lorem magna lorem ullamco maxime soluta voluptate ex qui incididunt non fugiat aliquip in omnis id occaecat autem duis esse nulla aut atque tempore officia expedita sed"
+                        readonly
+                    >
+                </div>
+              </div>
+
+
+                <div class="confirm-container">
+
+                    <button type="submit" id="confirmButton">
+                        CONFIRM
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>
+            PHONE NUMBER: 03-9145 5555
+            (OFFICE HOURS: 8:30AM - 6:00PM)
+        </p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+
+</footer>
+
+</body>
+
+</html>

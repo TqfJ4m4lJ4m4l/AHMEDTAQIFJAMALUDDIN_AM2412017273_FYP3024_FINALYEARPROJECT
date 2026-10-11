@@ -1,0 +1,368 @@
+/* Base page styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #dedcee;
+    color: #252735;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* The shared nav files control the navigation buttons and dropdowns. */
+
+header {
+    padding: 10px;
+    background: #767aa5;
+    color: #fff;
+}
+
+/* Article layout */
+
+.editorial-page {
+    width: min(1180px, calc(100% - 40px));
+    margin: 36px auto 64px;
+}
+
+.article-hero {
+    max-width: 850px;
+    margin: 0 auto 28px;
+    padding: clamp(26px, 5vw, 56px);
+    border: 1px solid rgba(74, 93, 115, 0.12);
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(32, 33, 45, 0.08);
+}
+
+.article-eyebrow,
+.section-kicker {
+    margin: 0 0 8px;
+    color: #52667c;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.article-hero h2 {
+    margin: 0 0 14px;
+    color: #252735;
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.15;
+}
+
+.article-hero > p:last-child {
+    max-width: 68ch;
+    margin: 0;
+    color: #515665;
+    font-size: 18px;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: minmax(210px, 260px) minmax(0, 1fr);
+    align-items: start;
+    gap: 26px;
+}
+
+/* Contents navigation */
+
+.article-toc {
+    display: grid;
+    gap: 5px;
+    padding: 22px;
+    border: 1px solid #d8d9e3;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.article-toc h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.article-toc a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 9px;
+    color: #334e68;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.article-toc a:hover,
+.article-toc a:focus-visible {
+    background: #edf1f7;
+    text-decoration: underline;
+}
+
+.article-toc a:focus-visible,
+.reference-list a:focus-visible {
+    outline: 3px solid #4a5d73;
+    outline-offset: 2px;
+}
+
+/* Main article content */
+
+.article-content {
+    display: grid;
+    gap: 20px;
+    min-width: 0;
+}
+
+.content-section {
+    min-width: 0;
+    padding: clamp(22px, 3.5vw, 38px);
+    border: 1px solid #d8d9e3;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(32, 33, 45, 0.06);
+    scroll-margin-top: 24px;
+}
+
+.content-section h2 {
+    margin: 0 0 14px;
+    color: #252735;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.content-section h3 {
+    margin: 26px 0 10px;
+    color: #35475c;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.content-section p {
+    max-width: 72ch;
+    margin: 0 0 16px;
+}
+
+.content-section p:last-child {
+    margin-bottom: 0;
+}
+
+.section-lead {
+    color: #454b5a;
+    font-size: 19px;
+}
+
+.article-list,
+.reference-list {
+    display: grid;
+    gap: 10px;
+    max-width: 72ch;
+    margin: 12px 0 20px;
+    padding-left: 24px;
+}
+
+.article-list li,
+.reference-list li {
+    padding-left: 4px;
+}
+
+.reference-list a {
+    color: #334e68;
+    text-underline-offset: 3px;
+}
+
+/* Team cards */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.team-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #d9dce5;
+    border-radius: 14px;
+    background: #f7f8fb;
+}
+
+.team-card-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #52667c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.team-card h3 {
+    margin: 0 0 8px;
+    color: #252735;
+    font-size: 20px;
+}
+
+.team-card p {
+    margin: 0;
+    color: #515665;
+    font-size: 15px;
+}
+
+/* Highlighted information */
+
+.article-callout {
+    max-width: 72ch;
+    margin: 22px 0;
+    padding: 20px 22px;
+    border-left: 5px solid #c3a03e;
+    border-radius: 10px;
+    background: #f6f3e9;
+}
+
+.article-callout h3 {
+    margin: 0 0 6px;
+    color: #3b3a34;
+    font-size: 18px;
+}
+
+.article-callout p {
+    margin: 0;
+}
+
+.article-callout--caution {
+    border-left-color: #9f2635;
+    background: #fff1f1;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 130px;
+    margin-top: 32px;
+    padding: 20px 28px;
+    background: #bebcd6;
+}
+
+.footer-contact {
+    flex: 1 1 auto;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: #52667c;
+    font-size: small;
+    font-weight: bold;
+}
+
+.footer-logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    width: min(320px, 28vw);
+}
+
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tablet layout */
+
+@media (max-width: 850px) {
+    .article-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-toc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .article-toc h2 {
+        grid-column: 1 / -1;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-version {
+        position: static;
+        transform: none;
+    }
+}
+
+/* Phone layout */
+
+@media (max-width: 560px) {
+    .editorial-page {
+        width: calc(100% - 24px);
+        margin: 20px auto 40px;
+    }
+
+    .article-hero,
+    .content-section {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .article-toc {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 18px;
+    }
+
+    .article-toc h2 {
+        grid-column: auto;
+    }
+
+    .team-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .footer-contact {
+        margin-top: 0;
+    }
+
+    .footer-logo {
+        width: min(320px, 100%);
+    }
+}
+
+/* Respect users who prefer less motion. */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

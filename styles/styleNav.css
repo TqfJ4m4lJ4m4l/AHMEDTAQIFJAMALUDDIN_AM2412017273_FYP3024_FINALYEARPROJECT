@@ -1,0 +1,180 @@
+/* Shared navigation layout */
+header > h1 {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+header > h1 > a {
+    flex: 0 0 auto;
+}
+
+header > h1 > a img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+header nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav > div {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+header nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+header nav > div:not(.dropdown) > button > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: 18px !important;
+    text-decoration: none;
+}
+
+header nav .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+header nav .dropdown-btn {
+    width: 48px;
+    min-width: 48px;
+    background: transparent;
+}
+
+header nav .dropdown-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav .dropdown-btn img {
+    display: block;
+    width: 45px;
+    height: 45px;
+}
+
+/* Let the navigation wrap cleanly on smaller screens */
+@media (max-width: 1000px) {
+    header > h1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav {
+        flex-basis: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+}
+
+:root {
+    --nav-background: rgba(74, 93, 115, 0.5);
+    --nav-background-hover: rgba(74, 93, 115, 0.65);
+}
+
+header nav > div:not(.dropdown) > button:not(.Report):not(.Request) {
+    background-color: rgba(74, 93, 115, 0.3);
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+header nav > div:not(.dropdown) > button:not(.Report):not(.Request):hover,
+header nav > div:not(.dropdown) > button:not(.Report):not(.Request):focus-visible {
+    background-color: rgba(74, 93, 115, 0.48);
+    transform: translateY(-1px);
+}
+/* Shared account dropdown */
+header nav .dropdown {
+    position: relative;
+}
+
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 1000;
+    min-width: 220px;
+    padding: 6px;
+    overflow: hidden;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+header nav .dropdown:hover .dropdown-content,
+header nav .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+header nav .dropdown-content a {
+    display: block;
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #333;
+    font: 16px/1.4 Arial, sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right !important;
+}
+
+header nav .dropdown-content a:hover,
+header nav .dropdown-content a:focus-visible {
+    background: #f1f1f1;
+}
+
+/* Keep the account menu anchored to the right of its icon */
+header nav .dropdown-content {
+    right: 0 !important;
+    left: auto !important;
+    text-align: right !important;
+}
+
+header nav .dropdown-content a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+}

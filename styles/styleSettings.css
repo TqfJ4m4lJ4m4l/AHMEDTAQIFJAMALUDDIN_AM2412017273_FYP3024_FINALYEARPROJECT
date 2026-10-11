@@ -1,0 +1,233 @@
+
+h1 /*header 1 */{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/*The body of the page outside of the header and footer*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DEDCEE;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+   
+    display: flex;
+    align-items: center;
+}
+
+
+header h1 a {
+    text-decoration: none;
+}
+
+/* header itself*/
+
+header {
+        background: #767aa5;
+
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
+
+/*Nav part of the Header*/
+
+nav {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav button {
+    margin: 0;
+    padding: 8px 12px;
+    height: 45px;
+    white-space: nowrap;
+}
+
+/* Navigation button containers */
+
+.report_button,
+.us_button,
+.neuro_button,
+.appointment_button {
+    margin: 0;
+    padding: 0;
+}
+
+/*Positioning dropdown*/
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /*shows where it should be positioned*/
+}
+
+.dropdown-btn {
+    background: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*The box itself*/
+}
+
+.dropdown-btn img {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/*Buttons for the Form*/
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #4A5D73;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4e7fb8;
+}
+
+/*Pushdown Display*/
+
+.account-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Footer (or at least how it can look for the login screen atm, tricky to adjust*/
+
+footer {
+    background: #bebcd6;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 130px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+/*For more Info:*/
+
+.footer-contact {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+/*Ver. Display*/
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: rgb(110, 124, 124);
+}
+
+/*HCTM logo*/
+
+.footer-logo {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 350px;
+    height: auto;
+    display: block;
+}

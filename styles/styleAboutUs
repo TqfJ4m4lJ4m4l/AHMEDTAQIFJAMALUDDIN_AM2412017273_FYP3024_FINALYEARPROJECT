@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    width: 100%;
+    background: #767aa5;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+
+/* Header layout */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* Logo */
+
+.header-content > a {
+    display: block;
+}
+
+.header-content > a img {
+    display: block;
+    max-width: 250px;
+    height: auto;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+header nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Navigation buttons */
+
+header nav button {
+    margin: 0;
+    padding: 8px 12px;
+    height: 45px;
+    border: none;
+    background: #4A5D73;
+}
+
+
+/* Navigation links */
+
+header nav button a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   LOGIN DROPDOWN
+   ===================================================== */
+
+header .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+header .dropdown-btn {
+    background: none;
+    padding: 0;
+    height: 45px;
+    border: none;
+}
+
+
+header .dropdown-btn a {
+    display: flex;
+    align-items: center;
+}
+
+
+header .dropdown-btn img {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+
+header .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    min-width: 160px;
+
+    background-color: white;
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    border-radius: 5px;
+
+    z-index: 1000;
+}
+
+
+header .dropdown-content a {
+    display: block;
+
+    margin: 0;
+    padding: 12px 16px;
+
+    color: #333;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+header .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+main {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOP IMAGE
+   ===================================================== */
+
+.h2_disp {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+
+.psych_disp {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+main section {
+    margin-bottom: 35px;
+}
+
+
+main section h2 {
+    color: #333;
+}
+
+
+.center-title {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   BOOK BUTTON
+   ===================================================== */
+
+.book-section {
+    text-align: center;
+}
+
+
+.book-section button {
+    padding: 12px 20px;
+
+    font-size: 16px;
+
+    background: #4A5D73;
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+}

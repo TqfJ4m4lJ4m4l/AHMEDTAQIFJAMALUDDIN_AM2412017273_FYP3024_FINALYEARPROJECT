@@ -1,0 +1,460 @@
+:root {
+    --request-page: #dedcee;
+    --request-panel: #393e41;
+    --request-panel-dark: #292d30;
+    --request-gold: #c3a03e;
+    --request-gold-light: #e5cf88;
+    --request-ink: #222;
+    --request-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--request-page);
+    color: var(--request-ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and shared navigation */
+header {
+    padding: 10px;
+        background: #767aa5;
+
+    color: white;
+}
+
+header > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-size: 18px;
+}
+
+header > h1 > a {
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+header > h1 > a img {
+    display: block;
+    width: clamp(190px, 16vw, 250px);
+    height: auto;
+}
+
+header nav > div:not(.dropdown) > button > a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Report and request navigation button colors */
+header nav .Report {
+    background-color: red;
+    color: white;
+}
+
+header nav .Request {
+    background-color: rgb(255, 192, 65);
+    color: #222;
+}
+
+/* Account dropdown */
+header nav .dropdown {
+    position: relative;
+}
+
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    min-width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+header nav .dropdown:hover .dropdown-content,
+header nav .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+header nav .dropdown-content a {
+    display: block;
+    margin: 0;
+    padding: 12px 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+header nav .dropdown-content a:hover,
+header nav .dropdown-content a:focus-visible {
+    background: #f1f1f1;
+}
+
+/* Main content and page heading */
+.request-main {
+    width: min(1200px, calc(100% - 40px));
+    max-width: none;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    flex: 1;
+}
+
+.request-heading,
+.request-title {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.request-eyebrow {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 5px 12px;
+    border: 1px solid var(--request-gold);
+    border-radius: 999px;
+    background: #fff2d9;
+    color: #5c4915;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.request-heading h2,
+.request-title h1 {
+    display: block;
+    margin: 0 0 8px;
+    color: #20212d;
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.request-heading > p:last-child {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Request submission status */
+.request-notice,
+.request-success {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: min(900px, 100%);
+    margin: 0 auto 20px;
+    padding: 15px 18px;
+    border: 1px solid #6d9b78;
+    border-left: 6px solid #438254;
+    border-radius: 10px;
+    background: #edf7ef;
+    color: #23432b;
+}
+
+.request-success {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* The request form panel */
+.request-main .request-form {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: clamp(22px, 4vw, 42px);
+    border: 1px solid var(--request-panel-dark);
+    border-radius: 20px;
+    background: var(--request-panel);
+    box-shadow: 0 8px 22px rgba(32, 33, 45, 0.2);
+    color: white;
+}
+
+/* Form panel heading */
+.request-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--request-gold);
+}
+
+.request-card-mark {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--request-gold);
+    color: #29251b;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.request-card-heading h3 {
+    margin: 0 0 3px;
+    color: white;
+    font-size: 25px;
+}
+
+.request-card-heading p {
+    margin: 0;
+    color: #e5e1d6;
+}
+
+/* Category options on the left, request fields on the right */
+.request-main .request-layout {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: clamp(24px, 5vw, 56px);
+}
+
+.request-main .request-options {
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid var(--request-gold);
+    border-radius: 12px;
+    color: white;
+}
+
+.request-main .request-options legend {
+    padding: 0 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.request-main .request-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.request-main .request-option input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--request-gold);
+}
+
+.request-help {
+    margin: 8px 0 0;
+    color: #e5e1d6;
+    font-size: 14px;
+}
+
+/* Reason, description, and submit button */
+.request-main .request-fields {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.request-main .request-fields label {
+    margin-top: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.request-main .request-fields input,
+.request-main .request-fields textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid var(--request-gold);
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #29252a;
+    font: 17px Arial, sans-serif;
+}
+
+.request-main .request-fields input {
+    min-height: 52px;
+}
+
+.request-main .request-fields textarea {
+    min-height: 190px;
+    resize: vertical;
+}
+
+.request-main .request-fields input:focus,
+.request-main .request-fields textarea:focus,
+.request-main .request-option input:focus-visible {
+    outline: 3px solid #f0c65c;
+    outline-offset: 2px;
+}
+
+.request-main .request-fields #confirmButton {
+    align-self: flex-start;
+    min-height: 50px;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border: 2px solid var(--request-gold-light);
+    border-radius: 9px;
+    background: #8b7022;
+    color: white;
+    font: 700 17px Arial, sans-serif;
+    cursor: pointer;
+}
+
+.request-main .request-fields #confirmButton:hover {
+    background: #a88a32;
+}
+
+.request-main .request-fields #confirmButton:focus-visible {
+    outline: 3px solid #f0c65c;
+    outline-offset: 3px;
+}
+
+/* Site footer */
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    min-height: 130px;
+    margin-top: auto;
+    padding: 18px 25px;
+    background: #bebcd6;
+}
+
+.footer-contact {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: #56666a;
+}
+
+.footer-logo {
+    display: flex;
+    width: min(350px, 28vw);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Fit the form to smaller screens */
+@media (max-width: 750px) {
+    .request-main {
+        width: min(100% - 24px, 620px);
+        padding-top: 28px;
+    }
+
+    .request-main .request-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .request-main .request-options {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 14px;
+    }
+
+    .request-main .request-options legend,
+    .request-main .request-options .request-help {
+        grid-column: 1 / -1;
+    }
+
+    .request-main .request-option {
+        margin: 10px 0;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .footer-version {
+        position: static;
+        order: 3;
+        width: 100%;
+        transform: none;
+    }
+
+    .footer-logo {
+        width: min(250px, 45vw);
+    }
+}
+
+@media (max-width: 480px) {
+    header > h1 {
+        padding: 12px 6px;
+    }
+
+    .request-main .request-options {
+        grid-template-columns: 1fr;
+    }
+
+    .request-main .request-fields #confirmButton {
+        width: 100%;
+    }
+
+    .footer-contact {
+        font-size: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+.notes-main p[role="alert"] {
+    margin: 0 0 16px;
+    padding: 12px 16px;
+    border: 1px solid #d98b94;
+    border-radius: 10px;
+    color: #7a1f2b;
+    background: #fff0f0;
+}

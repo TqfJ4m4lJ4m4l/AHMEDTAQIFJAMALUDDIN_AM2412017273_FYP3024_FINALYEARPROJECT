@@ -1,0 +1,94 @@
+/* Shared content styling for admin edit pages */
+main {
+    width: min(900px, 94%);
+    max-width: none;
+    margin: 40px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(32, 33, 45, 0.12);
+}
+
+main > h2 {
+    margin: 0 0 24px;
+    color: #20212d;
+    font-size: 30px;
+}
+
+main > p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+main form {
+    display: grid;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 25px;
+    background: #f3f0e8;
+    border-radius: 12px;
+}
+
+main form h3 {
+    margin: 0 0 8px;
+    color: #393e41;
+}
+
+main form label {
+    margin-top: 8px;
+    color: #393e41;
+    font-weight: bold;
+}
+
+main form input,
+main form select,
+main form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #c8c5bd;
+    border-radius: 8px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+main form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+main form button,
+main form input[type="submit"] {
+    justify-self: start;
+    width: auto;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #4a5d73;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+main form button:hover,
+main form input[type="submit"]:hover {
+    background: #4e7fb8;
+}
+
+main a {
+    color: #365e8a;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 96%;
+        padding: 20px 14px;
+    }
+
+    main form {
+        padding: 18px;
+    }
+}

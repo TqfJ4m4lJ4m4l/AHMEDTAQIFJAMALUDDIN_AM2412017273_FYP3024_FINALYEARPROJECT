@@ -1,0 +1,64 @@
+.record-details {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: larger;
+    width: min(800px, 90%);
+            margin: 40px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+}
+.record-details h1 {
+    color: #20212d;
+    font-size: 50px;
+}
+        .record-details {
+            width: min(800px, 90%);
+            margin: 40px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .record-details dl {
+            display: grid;
+            grid-template-columns: minmax(150px, 1fr) 2fr;
+            gap: 12px;
+        }
+
+        .record-details dt {
+            font-weight: bold;
+        }
+
+        .record-details dd {
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+        title{
+            color: black;
+        }
+dd{
+    border-style: groove;
+    border-radius: 5px;
+    text-align: right;
+    margin-right: 50px;
+    padding: 6px 10px;
+}
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.record-details {
+    flex: 1;
+}
+
+footer {
+    margin-top: 0;
+    background: #bebcd6;
+}

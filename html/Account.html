@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurodivergent - Account</title>
+
+    <link rel="stylesheet" href="../styles/styleAccount.css">
+</head>
+
+<body>
+
+<header>
+<h1>
+<a href="HomePage.html">
+    <img src="../img/neurodivergence.png" alt="Login Page" width="250">
+</a>
+
+
+
+<nav>
+  <div class="report_button">
+    <button class="Report" style="background-color: red;">
+      <a href="Report.html" style="font-size: larger;">REPORT</a>
+    </button>
+  </div>
+ <div class="us_button">
+  <button class="AboutUs" style="margin: auto;">
+   <a href="AboutUs.html" style="font-size: larger;">ABOUT US</a>
+  </button>
+ </div>
+
+<div class="neuro_button">
+  <button class="Neurodivergent">
+   <a href="Autism.html" style="font-size: larger;">NEURODIVERGENT</a>
+  </button>
+ </div>
+
+ <div class="appointment_button">
+  <button class="appointments">
+<a href="AutismBooker.php" style="font-size: larger;">APPOINTMENTS</a>
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn">
+     <a href= "LoginPage.html"> <img src="../img/login.png" alt="Login Page" width="70" height="70"></a>
+</button>
+<div class="dropdown-content">
+      <a href="Updates.html">Updates</a>
+      <a href="#settings">History</a>
+      <a href="Prescriptions.html">Prescriptions</a>
+      <a href="#logout">Log Out</a>
+    </div>
+  </div>
+
+</a>
+
+</nav>
+
+</h1>
+
+</header>
+<main>
+    <form class="account_Disp" id="accountForm">
+        <div class="account-header">
+            <div class="account-id-title">
+                ACCOUNT ID:
+            </div>
+            <input
+                type="text"
+                id="accountID"
+                name="accountID"
+                value="ACC001"
+                readonly
+            >
+
+            <button type="button" id="editButton">
+                EDIT
+            </button>
+
+        </div>
+
+
+        <div class="account-content">
+
+
+            <div class="account-column">
+
+
+                <div class="form-row">
+                    <label for="name">NAME:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="John Doe"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <label for="birthDate">BIRTH DATE:</label>
+
+                    <input
+                        type="date"
+                        id="birthDate"
+                        name="birthDate"
+                        value="2000-01-01"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <label for="gender">GENDER:</label>
+
+                    <select id="gender" name="gender" disabled>
+                        <option value="MALE" selected>MALE</option>
+                        <option value="FEMALE">FEMALE</option>
+                    </select>
+                </div>
+
+
+                <div class="form-row">
+                    <label for="role">ROLE:</label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        name="role"
+                        value="PATIENT"
+                        readonly
+                    >
+                </div>
+
+
+            </div>
+
+
+            <div class="account-column">
+
+
+                <div class="form-row">
+                    <label for="email">EMAIL:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value="example@email.com"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <label for="password">PASSWORD:</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value="password123"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-row password-request">
+
+                    <label for="passwordRequest">
+                        REQUEST PASSWORD<br>
+                        CHANGE:
+                    </label>
+
+                    <select id="passwordRequest" name="passwordRequest" disabled>
+                        <option value="NO" selected>NO</option>
+                        <option value="YES">YES</option>
+                    </select>
+
+                </div>
+
+
+                <div class="confirm-container">
+
+                    <button type="submit" id="confirmButton">
+                        CONFIRM
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>PHONE NUMBER: 03-9145 5555 (OFFICE HOURS: 8:30AM - 6:00PM)</p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+
+</footer>
+
+
+<script>
+
+const editButton = document.getElementById("editButton");
+
+const accountID = document.getElementById("accountID");
+const name = document.getElementById("name");
+const birthDate = document.getElementById("birthDate");
+const gender = document.getElementById("gender");
+const role = document.getElementById("role");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const passwordRequest = document.getElementById("passwordRequest");
+
+const accountForm = document.getElementById("accountForm");
+
+
+let editing = false;
+
+
+editButton.addEventListener("click", function () {
+once: true
+    editing = !editing;
+
+    if (editing) {
+
+        accountID.readOnly = false;
+        name.readOnly = false;
+        birthDate.readOnly = false;
+        role.readOnly = false;
+        email.readOnly = false;
+        password.readOnly = false;
+
+        gender.disabled = false;
+        passwordRequest.disabled = false;
+        $('editButton').one('click', () => {
+                  $('editButton').attr('disabled', 'disabled');
+});
+
+    } else {
+
+        accountID.readOnly = true;
+        name.readOnly = true;
+        birthDate.readOnly = true;
+        role.readOnly = true;
+        email.readOnly = true;
+        password.readOnly = true;
+
+        gender.disabled = true;
+        passwordRequest.disabled = true;
+
+        editButton.textContent = "EDIT";
+
+        editButton.classList.remove("save-mode");
+
+        alert("Your information has been saved.");
+
+    }
+
+});
+
+
+accountForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    if (!name.value ||
+        !birthDate.value ||
+        !gender.value ||
+        !role.value ||
+        !email.value ||
+        !password.value) {
+
+        alert("Please fill in all account information.");
+
+        return;
+    }
+
+    alert("Account information confirmed.");
+
+});
+
+</script>
+
+</body>
+</html>

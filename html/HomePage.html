@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurodivergent | Home</title>
+
+    <link rel="stylesheet" href="../styles/styleHome.css?v=3">
+    <link rel="stylesheet" href="../styles/styleNav.css?v=3">
+    <link rel="stylesheet" href="../styles/styleSpefDrop.css?v=4">
+    <link rel="stylesheet" href="../styles/styleTheme.css">
+</head>
+<body>
+<header>
+    <h1>
+        <a href="HomePage.html" aria-label="Neurodivergent home">
+            <img src="../img/neurodivergence.png" alt="Neurodivergent">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <div class="us_button spef-dropdown">
+                <button
+                    class="spef-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="about-menu"
+                >
+                    ABOUT US <span aria-hidden="true">&#9662;</span>
+                </button>
+
+                <div class="spef-dropdown-menu" id="about-menu">
+                    <a href="AboutUs.html#our-team">Our Team</a>
+                    <a href="AboutUs.html#psychiatric-faculty">Psychiatric Faculty</a>
+                    <a href="AboutUs.html#why-this-department">Why This Department?</a>
+                </div>
+            </div>
+
+            <div class="neuro_button spef-dropdown">
+                <button
+                    class="spef-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="neuro-menu"
+                >
+                    NEURODIVERGENCE <span aria-hidden="true">&#9662;</span>
+                </button>
+
+                <div class="spef-dropdown-menu" id="neuro-menu">
+                    <a href="Autism.html#what-is-neurodivergence">What Is Neurodivergence?</a>
+                    <a href="Autism.html#traits-and-approaches">Traits and Approaches</a>
+                    <a href="Autism.html#medication-and-support">Medication and Support</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn" type="button" aria-label="Open account">
+                    <a href="../php/account.php">
+                        <img src="../img/login.png" alt="Account" width="45" height="45">
+                    </a>
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="../php/account.php">Login</a>
+                </div>
+            </div>
+        </nav>
+    </h1>
+</header>
+
+<main class="home-page">
+    <!-- Wide homepage image, using the existing psychiatric banner. -->
+    <section class="home-hero" aria-label="Psychiatric support">
+        <img
+            src="../img/psychiatric.jpg"
+            class="psych_disp"
+            alt="Psychiatric support at Hospital Canselor Tuanku Muhriz"
+        >
+    </section>
+
+    <div class="home-content">
+        <!-- Main summary -->
+        <section class="home-introduction" aria-labelledby="home-title">
+            <div class="home-brand-card">
+                <p class="home-eyebrow">A welcoming place to begin</p>
+                <h2 id="home-title">
+                    Malaysia’s trusted advocate in neurodivergence awareness
+                </h2>
+
+                <p class="home-association-label">
+                    In association with the Medication and Rehabilitation Education of:
+                </p>
+
+                <img
+                    src="../img/hctmcolor.png"
+                    class="home-partner-logos"
+                    alt="Universiti Kebangsaan Malaysia and HCTM"
+                >
+            </div>
+
+            <div class="home-statement">
+                <p class="home-eyebrow">Our purpose</p>
+                <h2>
+                    We want people to understand neurodivergence and
+                    neurodivergent people.
+                </h2>
+            </div>
+
+            <div class="home-summary">
+                <p>
+                    Our department aims to promote understanding of
+                    neurodivergence, reduce stigma, and share information
+                    about support. We recognise that each person and family
+                    has their own experiences, strengths, and needs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Static information cards, with no action controls. -->
+        <section class="home-overview" aria-labelledby="overview-title">
+            <div class="section-heading">
+                <p class="home-eyebrow">Explore the information</p>
+                <h2 id="overview-title">A place to learn and connect</h2>
+            </div>
+
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <span class="overview-number" aria-hidden="true">01</span>
+                    <h3>Learn</h3>
+                    <p>
+                        Read about neurodivergence, traits, approaches, and
+                        support in clear sections.
+                    </p>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-number" aria-hidden="true">02</span>
+                    <h3>Meet the team</h3>
+                    <p>
+                        Learn about the people and services connected with
+                        the Psychiatric Faculty.
+                    </p>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-number" aria-hidden="true">03</span>
+                    <h3>Find support</h3>
+                    <p>
+                        Explore the information on this site at a pace and
+                        in a way that feels comfortable to you.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- A static staff activity feature, using the existing poster image. -->
+        <section class="home-feature" aria-labelledby="staff-feature-title">
+            <div class="section-heading">
+                <p class="home-eyebrow">Department activity</p>
+                <h2 id="staff-feature-title">What our staff have been up to</h2>
+            </div>
+
+            <div class="staff-feature-card">
+                <div class="staff-feature-image">
+                    <img
+                        src="../img/Poster2.jpeg"
+                        alt="Poster for a psychiatry department webinar"
+                    >
+                </div>
+
+                <div class="staff-feature-copy">
+                    <p class="feature-label">Staff activity highlight</p>
+                    <h3>Sharing knowledge and supporting conversation</h3>
+                    <p>
+                        Department activities can bring staff and the
+                        community together to learn, share experience, and
+                        build understanding.
+                    </p>
+                    <p class="feature-note">
+                        This is a static event highlight. Replace the poster
+                        and description when you have a newer department
+                        activity to display.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location is the last main content section before the footer. -->
+        <section class="home-location" aria-labelledby="location-title">
+            <div class="section-heading">
+                <p class="home-eyebrow">Visit us</p>
+                <h2 id="location-title">Our Location</h2>
+            </div>
+
+            <div class="location-card">
+                <div class="location-map">
+                    <img
+                        src="../img/siteplan.jpg"
+                        alt="Site plan for Hospital Canselor Tuanku Muhriz UKM"
+                    >
+                </div>
+
+                <div class="location-details">
+                    <p class="location-label">Located in</p>
+                    <p class="location-hospital">
+                        <a
+                            href="https://www.google.com/search?q=Hospital+Canselor+Tuanku+Muhriz+UKM"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hospital Canselor Tuanku Muhriz UKM
+                        </a>
+                    </p>
+
+                    <dl class="location-contact-list">
+                        <div>
+                            <dt>Address</dt>
+                            <dd>
+                                Hospital Canselor Tuanku Muhriz UKM,<br>
+                                Jalan Yaacob Latif, Bandar Tun Razak,<br>
+                                56000 Cheras, Wilayah Persekutuan Kuala Lumpur
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt>HCTM general line</dt>
+                            <dd>
+                                <a href="tel:+60391455555">03-9145 5555</a>
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt>Psychiatry clinic</dt>
+                            <dd>
+                                <a href="tel:+60391457360">03-9145 7360</a>
+                                /
+                                <a href="tel:+60391457361">03-9145 7361</a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <p class="location-source">
+                        Address and contact details are listed on the
+                        <a
+                            href="https://hctm.ukm.my/en/hubungi-kami/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            official HCTM contact page
+                        </a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>PHONE NUMBER: 03-9145 5555</p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM and UKM">
+    </div>
+</footer>
+<script src="../javascript/theme.js" defer></script>
+</body>
+</html>

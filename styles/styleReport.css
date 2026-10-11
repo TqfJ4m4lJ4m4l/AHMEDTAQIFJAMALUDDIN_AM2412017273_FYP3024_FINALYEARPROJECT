@@ -1,0 +1,444 @@
+/* Page colors and shared sizing */
+:root {
+    --report-red: #9f2635;
+    --report-red-dark: #741b29;
+    --report-red-soft: #fff0f1;
+    --report-warning: #f0b44d;
+    --report-ink: #26232a;
+    --report-page: #dedcee;
+    --report-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--report-ink);
+    background: var(--report-page);
+}
+
+/* Shared site header */
+header {
+    padding: 10px;
+    color: white;
+        background: #767aa5;
+
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-size: 18px;
+}
+
+header h1 > a {
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+header h1 > a img {
+    display: block;
+    width: clamp(190px, 16vw, 250px);
+    height: auto;
+}
+
+/* Main report content */
+.report-main {
+    width: min(1200px, calc(100% - 40px));
+    max-width: none;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    flex: 1;
+}
+
+.report-heading {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.report-eyebrow {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 5px 12px;
+    border: 1px solid #d88a31;
+    border-radius: 999px;
+    color: #713c12;
+    background: #fff2d9;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.report-heading h2 {
+    margin: 0 0 8px;
+    color: var(--report-red-dark);
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.report-heading > p:last-child {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Submission and validation messages */
+.report-notice {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: min(900px, 100%);
+    margin: 0 auto 20px;
+    padding: 15px 18px;
+    border: 1px solid;
+    border-left-width: 6px;
+    border-radius: 10px;
+}
+
+.report-notice--success {
+    border-color: #6d9b78;
+    background: #edf7ef;
+    color: #23432b;
+}
+
+.report-notice--error {
+    border-color: #c54650;
+    background: #fff0f1;
+    color: #6e1720;
+}
+
+/* Main report form panel */
+.report-card {
+    width: 100%;
+    padding: clamp(22px, 4vw, 42px);
+    border: 1px solid #74202a;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #8e2633, #681d29);
+    box-shadow: 0 8px 22px rgba(64, 20, 28, 0.2);
+    color: white;
+}
+
+.report-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.report-warning-mark {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--report-warning);
+    color: #4a2810;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.report-card-heading h3 {
+    margin: 0 0 3px;
+    font-size: 25px;
+}
+
+.report-card-heading p {
+    margin: 0;
+    color: #f8e8e7;
+}
+
+/* Category options on the left and report fields on the right */
+.report-form {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.5fr);
+    gap: clamp(24px, 5vw, 56px);
+    align-items: start;
+}
+
+.report-categories {
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid rgba(255, 220, 180, 0.8);
+    border-radius: 12px;
+}
+
+.report-categories legend {
+    padding: 0 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.report-category-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.report-category-option input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--report-warning);
+}
+
+.report-fields {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.report-fields label {
+    margin-top: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.report-fields input,
+.report-fields textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #f2c3bd;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #29252a;
+    font: 17px Arial, sans-serif;
+}
+
+.report-fields input {
+    min-height: 52px;
+}
+
+.report-fields textarea {
+    min-height: 190px;
+    resize: vertical;
+}
+
+.report-fields input:focus,
+.report-fields textarea:focus,
+.report-category-option input:focus-visible {
+    outline: 3px solid var(--report-warning);
+    outline-offset: 2px;
+}
+
+.report-help {
+    margin: 0 0 8px;
+    color: #ffe4df;
+    font-size: 14px;
+}
+
+.report-fields button[type="submit"] {
+    align-self: flex-start;
+    min-height: 50px;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border: 2px solid #ffc7a1;
+    border-radius: 9px;
+    background: #c12d3b;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.report-fields button[type="submit"]:hover {
+    background: #e0444f;
+    transform: translateY(-1px);
+}
+
+.report-fields button[type="submit"]:focus-visible {
+    outline: 3px solid var(--report-warning);
+    outline-offset: 3px;
+}
+
+/* Site footer */
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    min-height: 130px;
+    margin-top: auto;
+    padding: 18px 25px;
+    background: #bebcd6;
+}
+
+.footer-contact {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: #56666a;
+}
+
+.footer-logo {
+    display: flex;
+    width: min(350px, 28vw);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Stack content for narrower screens */
+@media (max-width: 750px) {
+    .report-main {
+        width: min(100% - 24px, 620px);
+        padding-top: 28px;
+    }
+
+    .report-form {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .report-categories {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 14px;
+    }
+
+    .report-categories legend,
+    .report-help {
+        grid-column: 1 / -1;
+    }
+
+    .report-category-option {
+        margin: 10px 0;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .footer-version {
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+    }
+
+    .footer-logo {
+        width: min(250px, 45vw);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        padding: 12px 6px;
+    }
+
+    .report-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .report-fields button[type="submit"] {
+        width: 100%;
+    }
+
+    .footer-contact {
+        font-size: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Keep navigation links readable on their buttons */
+header nav > div:not(.dropdown) > button > a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Hide the account menu until hover or keyboard focus */
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    min-width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+header nav .dropdown:hover .dropdown-content,
+header nav .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Stack and style the account menu links */
+header nav .dropdown-content a {
+    display: block;
+    margin: 0;
+    padding: 12px 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+header nav .dropdown-content a:hover,
+header nav .dropdown-content a:focus-visible {
+    background-color: #f1f1f1;
+}
+.notes-main p[role="alert"] {
+    margin: 0 0 16px;
+    padding: 12px 16px;
+    border: 1px solid #d98b94;
+    border-radius: 10px;
+    color: #7a1f2b;
+    background: #fff0f0;
+}

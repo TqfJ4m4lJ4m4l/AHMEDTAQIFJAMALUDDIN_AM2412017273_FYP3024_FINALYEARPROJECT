@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Neurodivergent - Report</title>
+
+<link rel="stylesheet" href="../styles/styleReport.css">
+</head>
+
+<body>
+<header>
+<h1>
+<a href="HomePage.html">
+    <img src="../img/neurodivergence.png" alt="Login Page" width="250">
+</a>
+<nav>
+  <div class="report_button">
+    <button class="Report" style="background-color: red;">
+      <a href="Report.html" style="font-size: larger;">REPORT</a>
+    </button>
+  </div>
+ <div class="us_button">
+  <button class="AboutUs" style="margin: auto;">
+   <a href="AboutUs.html" style="font-size: larger;">ABOUT US</a>
+  </button>
+ </div>
+
+<div class="neuro_button">
+  <button class="Neurodivergent">
+   <a href="Autism.html" style="font-size: larger;">NEURODIVERGENT</a>
+  </button>
+ </div>
+
+ <div class="appointment_button">
+  <button class="appointments">
+<a href="appointments.html" style="font-size: larger;">APPOINTMENTS</a>
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn">
+     <a href= "../php/account.php"> <img src="../img/login.png" alt="Login Page" width="70" height="70"></a>
+</button>
+<div class="dropdown-content">
+      <a href="#dashboard">Updates</a>
+      <a href="#settings">Settings</a>
+      <a href="#profile">My Profile</a>
+      <a href="#logout">Log Out</a>
+    </div>
+  </div>
+</a>
+</nav>
+</h1>
+</header>
+<main>
+<div class="container">
+<!-- LOGIN FORM -->
+  <div class="form-box active" id="login-form">
+    <h3>REPORT</h3>
+    <form action="../PHP/report.php" method="POST">
+      <input type="ID" name="user_ID" placeholder="ID" required>
+      <input type="Topic" name="Report Topic" placeholder="Topic" required>
+      <input type="Description" name="Desc-Rep" placeholder="Description" required style="height: 200px;">
+      <button type="submit" style="background-color: red; border-radius: 10px;">Submit</button>
+</form>
+</div>
+</main>
+
+<!-- Footer for this page -->
+<footer>
+
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>PHONE NUMBER: 03-9145 5555 (OFFICE HOURS: 8:30AM - 6:00PM)</p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+
+</footer>
+
+
+
+
+
+
+</body>
+</html>

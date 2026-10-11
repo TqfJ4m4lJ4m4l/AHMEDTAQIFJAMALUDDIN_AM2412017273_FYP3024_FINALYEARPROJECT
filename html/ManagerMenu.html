@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurodivergent - Management</title>
+
+    <link rel="stylesheet" href="../styles/styleAdmin.css">
+</head>
+
+<body>
+
+<header>
+<h1>
+<a href="HomePage.html">
+    <img src="../img/neurodivergence.png" alt="Login Page" width="250">
+</a>
+
+
+
+<nav>
+  <div class="report_button">
+    <button class="Report" style="background-color: red;">
+      <a href="Report.html" style="font-size: larger;">REPORT</a>
+    </button>
+  </div>
+ <div class="us_button">
+  <button class="AboutUs" style="margin: auto;">
+   <a href="AboutUs.html" style="font-size: larger;">ABOUT US</a>
+  </button>
+ </div>
+
+<div class="neuro_button">
+  <button class="Neurodivergent">
+   <a href="Requests.html" style="font-size: larger;">REQUESTS</a>
+  </button>
+ </div>
+
+ <div class="appointment_button">
+  <button class="appointments">
+<a href="ManagerMenu.html" style="font-size: larger;">MANAGEMENT</a>
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn">
+     <a href= "LoginPage.html"> <img src="../img/login.png" alt="Login Page" width="70" height="70"></a>
+</button>
+<div class="dropdown-content">
+      <a href="Updates.html">Notifications</a>
+      <a href="Settings.html">Settings</a>
+      <a href="Prescriptions.html">Prescriptions</a>
+      <a href="#logout">Log Out</a>
+    </div>
+  </div>
+</a>
+</nav>
+</h1>
+</header>
+
+<div class="table-slider-container">
+<div class="table-slider-track" id="sliderTrack">
+    <div class="table-slide">
+        <table>
+            <caption>Recent Activity:</caption>
+            <br>
+            <tr>
+                <th>REPORT ID:</th>
+                <th>USER ID:</th>
+                <th>USERNAME:</th>
+                <th>REASON:</th>
+                <th>DESCRIPTION:</th>
+            </tr>
+            <tr>
+                <td>RU0011</td>
+                <td>U074</td>
+                <td>KAREEM JACKSON</td>
+                <td>REQUEST TO PUT ON LEAVE</td>
+                <td>BLAH BLAH BLAH</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>REPORT ID:</th>
+                <th>USER ID:</th>
+                <th>USERNAME:</th>
+                <th>REASON:</th>
+                <th>DESCRIPTION:</th>
+            </tr>
+        <br>
+            <tr>
+                <td>RU0011</td>
+                <td>U074</td>
+                <td>KAREEM JACKSON</td>
+                <td>REQUEST TO PUT ON LEAVE</td>
+                <td>BLAH BLAH BLAH</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>REPORT ID:</th>
+                <th>USER ID:</th>
+                <th>USERNAME:</th>
+                <th>REASON:</th>
+                <th>DESCRIPTION:</th>
+            </tr>
+            <tr>
+                <td>RU0011</td>
+                <td>U074</td>
+                <td>KAREEM JACKSON</td>
+                <td>REQUEST TO PUT ON LEAVE</td>
+                <td>BLAH BLAH BLAH</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table-slide">
+        <table>
+
+            <caption>Recent Appointments:</caption>
+
+            <thead>
+                <tr>
+                    <th>PATIENT ID:</th>
+                    <th>PATIENT NAME:</th>
+                    <th>CONSULTANT:</th>
+                    <th>DATE:</th>
+                    <th>TIME:</th>
+                    <th>ROOM:</th>
+                    <th>APPOINTMENT STATUS:</th>
+                    <th>ATTENDANCE</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>U001</td>
+                    <td>John Doe</td>
+                    <td>Dr. Bryan Hodukavich</td>
+                    <td>17/Sep/2026</td>
+                    <td>2:00PM</td>
+                    <td>1</td>
+                    <td>Approved</td>
+                    <td>Attended</td>
+                </tr>
+
+                <tr>
+                    <td>U001</td>
+                    <td>John Doe</td>
+                    <td>Dr. Anby Demara</td>
+                    <td>4/July/2026</td>
+                    <td>12:00PM</td>
+                    <td>5</td>
+                    <td>Approved</td>
+                    <td>Attended</td>
+                </tr>
+
+                <tr>
+                    <td>U001</td>
+                    <td>John Doe</td>
+                    <td>Dr. Zhuang Fangyi</td>
+                    <td>17/April/2026</td>
+                    <td>2:00PM</td>
+                    <td>5</td>
+                    <td>Approved</td>
+                    <td>Attended</td>
+                </tr>
+
+                <tr>
+                    <td>U001</td>
+                    <td>John Doe</td>
+                    <td>Dr. Jamaluddin Zainal Abidin</td>
+                    <td>9/February/2026</td>
+                    <td>2:00PM</td>
+                    <td>Digital Meeting</td>
+                    <td>Approved</td>
+                    <td>Attended</td>
+                </tr>
+
+                <tr>
+                    <td>U001</td>
+                    <td>John Doe</td>
+                    <td>Dr. Saige Willowstar</td>
+                    <td>17/Dec/2025</td>
+                    <td>9:00AM</td>
+                    <td>10</td>
+                    <td>Approved</td>
+                    <td>Attended</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!-- Table 3 -->
+    <div class="table-slide">
+        <table>
+
+            <caption>Recent Orders:</caption>
+
+            <tr>
+                <th>ID</th>
+                <th>Item</th>
+                <th>Cost</th>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Banana</td>
+                <td>$1</td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+
+<!-- Controls -->
+<button class="slider-btn prev-btn" onclick="moveSlide(-1)">
+    <i class="leftNextDisplayForRecent"></i>
+</button>
+
+<button class="slider-btn next-btn" onclick="moveSlide(1)">
+    <i class="rightNextDisplayForRecent"></i>
+</button>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>
+            PHONE NUMBER: 03-9145 5555
+            (OFFICE HOURS: 8:30AM - 6:00PM)
+        </p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+
+</footer>
+<script src="../javascript/tableSlider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --app-page: #dedcee;
+    --app-surface: #ffffff;
+    --app-panel: #393e41;
+    --app-accent: #c3a03e;
+    --app-accent-soft: #e5cf88;
+    --app-text: #222222;
+    --app-panel-text: #ffffff;
+    --app-control-bg: #ffffff;
+    --app-control-text: #222222;
+    --app-display-bg: #e7e6ed;
+    --app-display-text: #222222;
+    --app-border: #c9c9cf;
+    --app-header: #b6b8d6;
+    --app-nav-button: #4a5d73;
+    --app-footer: #bebcd6;
+    --app-footer-text: #222222;
+    --app-report-nav: #a6212e;
+    --app-request-nav: #806000;
+    --app-report-nav-hover: #851a25;
+    --app-request-nav-hover: #684d00;
+    --app-font: Arial, sans-serif;
+}
+
+/* Muted mauve and blue palette */
+:root[data-palette="colors"] {
+    --app-page: #b7d2e8;
+    --app-surface: #f7f7f4;
+    --app-panel: #887c84;
+    --app-accent: #a7c8e2;
+    --app-accent-soft: #d8e7f3;
+    --app-text: #28262a;
+    --app-panel-text: #ffffff;
+    --app-border: #9aaab9;
+    --app-header: #887c84;
+    --app-nav-button: #536978;
+    --app-footer: #a9c6dc;
+    --app-report-nav: #a32530;
+    --app-request-nav: #765400;
+    --app-report-nav-hover: #831b25;
+    --app-request-nav-hover: #604400;
+}
+
+/* Navy, cream, and coral palette */
+:root[data-palette="colors2"] {
+    --app-page: #f4e4ca;
+    --app-surface: #fff9ef;
+    --app-panel: #1c286e;
+    --app-accent: #d4877b;
+    --app-accent-soft: #edc0a7;
+    --app-text: #20264f;
+    --app-panel-text: #ffffff;
+    --app-border: #d3bba2;
+    --app-header: #26336e;
+    --app-nav-button: #37457d;
+    --app-footer: #e6d5bc;
+    --app-report-nav: #a32330;
+    --app-request-nav: #795700;
+    --app-report-nav-hover: #831b26;
+    --app-request-nav-hover: #604500;
+}
+
+/* Soft gray and blue palette */
+:root[data-palette="color3"] {
+    --app-page: #e6e9e9;
+    --app-surface: #f8f9f9;
+    --app-panel: #3c4142;
+    --app-accent: #66828b;
+    --app-accent-soft: #b9cbd0;
+    --app-text: #282d2f;
+    --app-panel-text: #ffffff;
+    --app-border: #aeb9bc;
+    --app-header: #71858b;
+    --app-nav-button: #4f6871;
+    --app-footer: #cbd4d5;
+    --app-report-nav: #a3212c;
+    --app-request-nav: #795900;
+    --app-report-nav-hover: #801923;
+    --app-request-nav-hover: #624800;
+}
+
+/* Soft green and slate palette */
+:root[data-palette="color4"] {
+    --app-page: #e4f5ec;
+    --app-surface: #f8fcfa;
+    --app-panel: #493e3a;
+    --app-accent: #b9c7bf;
+    --app-accent-soft: #cbd9ef;
+    --app-text: #2f3834;
+    --app-panel-text: #ffffff;
+    --app-border: #b4c6bd;
+    --app-header: #829d91;
+    --app-nav-button: #526e64;
+    --app-footer: #c8ded2;
+    --app-report-nav: #a3212c;
+    --app-request-nav: #785700;
+    --app-report-nav-hover: #801923;
+    --app-request-nav-hover: #604500;
+}
+
+/* Warm earth palette */
+:root[data-palette="color5"] {
+    --app-page: #fff1c8;
+    --app-surface: #fff9e5;
+    --app-panel: #5c2416;
+    --app-accent: #f0ae47;
+    --app-accent-soft: #ffe27b;
+    --app-text: #392117;
+    --app-panel-text: #ffffff;
+    --app-border: #d8ad6c;
+    --app-header: #71331f;
+    --app-nav-button: #87432a;
+    --app-footer: #ead49e;
+    --app-report-nav: #a51f25;
+    --app-request-nav: #805000;
+    --app-report-nav-hover: #84181e;
+    --app-request-nav-hover: #654000;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
+    --app-page: #22272b;
+    --app-surface: #30373c;
+    --app-panel: #191e22;
+    --app-text: #f1f3f4;
+    --app-panel-text: #f1f3f4;
+    --app-control-bg: #343c42;
+    --app-control-text: #f1f3f4;
+    --app-display-bg: #414a50;
+    --app-display-text: #ffffff;
+    --app-border: #626d73;
+    --app-header: #252a30;
+    --app-nav-button: #414b53;
+    --app-footer: #30373c;
+    --app-footer-text: #f1f3f4;
+    --app-report-nav: #811b25;
+    --app-request-nav: #674900;
+    --app-report-nav-hover: #6b151e;
+    --app-request-nav-hover: #523a00;
+}
+
+/* Font preference */
+html[data-font="poppins"] {
+    --app-font: "Poppins", Arial, sans-serif;
+}
+
+/* Base page colors and font */
+html,
+body {
+    background-color: var(--app-page) !important;
+    color: var(--app-text);
+    font-family: var(--app-font);
+}
+
+body,
+body button,
+body input,
+body select,
+body textarea {
+    font-family: var(--app-font);
+}
+
+/* Account page background */
+body.account-page {
+    background-image: url("../img/Panorama.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+}
+
+/* Keep the page background transparent so page-specific panels remain intact. */
+main {
+    background-color: transparent !important;
+    color: var(--app-text);
+}
+
+/* Theme form controls without repainting whole forms or cards. */
+main input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
+main select,
+main textarea {
+    box-sizing: border-box;
+    border-color: var(--app-border) !important;
+    background-color: var(--app-control-bg) !important;
+    color: var(--app-control-text) !important;
+    font-size: 16px;
+}
+
+/* Account information fields */
+body.account-page .account-main .account-fields {
+    gap: 20px 28px;
+}
+
+body.account-page .account-main .account-field {
+    min-width: 0;
+}
+
+body.account-page .account-main .account-field input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    padding: 12px 14px;
+    border: 1px solid var(--app-border) !important;
+    border-radius: 9px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+body.account-page .account-main .account-field input[readonly] {
+    background-color: var(--app-display-bg) !important;
+    color: var(--app-display-text) !important;
+    cursor: default;
+}
+
+body.account-page .account-main .account-field input:not([readonly]) {
+    background-color: var(--app-control-bg) !important;
+    color: var(--app-control-text) !important;
+    border: 2px solid var(--app-accent) !important;
+}
+
+body.account-page .account-main .account-field input:focus-visible {
+    outline: 3px solid var(--app-accent-soft);
+    outline-offset: 2px;
+}
+
+/* Readable page titles in both light and dark modes */
+.request-heading h2,
+.request-title h1,
+.notes-main > h2,
+.updates-main h2,
+.prescription-page-title {
+    color: var(--app-text) !important;
+}
+
+/* Updates cards and the empty state */
+.updates-main > p,
+.update-card {
+    background-color: var(--app-surface) !important;
+    color: var(--app-text) !important;
+}
+
+.update-card p,
+.update-card time {
+    color: var(--app-text) !important;
+}
+
+/* Prescription history and creation panels */
+.prescription-history,
+.prescription-create {
+    background-color: var(--app-surface) !important;
+    color: var(--app-text) !important;
+}
+
+.prescription-history h2,
+.prescription-create h2 {
+    color: var(--app-text) !important;
+}
+
+.prescription-history .prescription-panel-description,
+.prescription-history .prescription-eyebrow,
+.prescription-history .table-secondary {
+    color: var(--app-text) !important;
+}
+
+/* Shared header colors */
+header {
+    background-color: var(--app-header) !important;
+    color: #ffffff !important;
+}
+
+/* Standard nav buttons.
+   Special dropdown buttons keep their own padding and sizing. */
+header nav > div:not(.dropdown):not(.spef-dropdown) > button:not(.Report):not(.Request) {
+    background-color: var(--app-nav-button) !important;
+    color: #ffffff !important;
+}
+
+header nav > div:not(.dropdown):not(.spef-dropdown) > button:not(.Report):not(.Request):hover,
+header nav > div:not(.dropdown):not(.spef-dropdown) > button:not(.Report):not(.Request):focus-visible {
+    filter: brightness(0.88);
+}
+
+/* Keep Report red and Request gold, with darker shades for white text. */
+header nav .Report {
+    background-color: var(--app-report-nav) !important;
+    color: #ffffff !important;
+}
+
+header nav .Request {
+    background-color: var(--app-request-nav) !important;
+    color: #ffffff !important;
+}
+
+header nav .Report:hover,
+header nav .Report:focus-visible {
+    background-color: var(--app-report-nav-hover) !important;
+}
+
+header nav .Request:hover,
+header nav .Request:focus-visible {
+    background-color: var(--app-request-nav-hover) !important;
+}
+
+header nav > div:not(.dropdown) > button > a {
+    color: #ffffff !important;
+}
+
+/* Account dropdown */
+header nav .dropdown-content {
+    border-color: var(--app-border) !important;
+    background-color: var(--app-surface) !important;
+}
+
+header nav .dropdown-content a {
+    color: var(--app-text) !important;
+}
+
+header nav .dropdown-content a:hover,
+header nav .dropdown-content a:focus-visible {
+    background-color: var(--app-page) !important;
+}
+
+/* Footer follows the selected palette */
+footer {
+    border-color: var(--app-border) !important;
+    background-color: var(--app-footer) !important;
+    color: var(--app-footer-text) !important;
+}
+
+footer p {
+    color: var(--app-footer-text) !important;
+}
+
+/* Schedule table outer corners */
+.schedule-table-wrap {
+    border-radius: 16px !important;
+    overflow: auto;
+}
+
+.schedule-table-wrap > table {
+    border-radius: 14px !important;
+    overflow: hidden;
+}
+
+.schedule-table-wrap th:first-child {
+    border-top-left-radius: 12px !important;
+}
+
+.schedule-table-wrap th:last-child {
+    border-top-right-radius: 12px !important;
+}
+
+.schedule-table-wrap tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px !important;
+}
+
+.schedule-table-wrap tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px !important;
+}
+
+@media (max-width: 700px) {
+    body.account-page {
+        background-attachment: scroll;
+    }
+
+    body.account-page .account-main .account-fields {
+        gap: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* Theme-aware article panels on About Us and Autism pages */
+.editorial-page .article-hero,
+.editorial-page .article-toc,
+.editorial-page .content-section,
+.editorial-page .team-card,
+.editorial-page .article-callout {
+    background-color: var(--app-surface) !important;
+    color: var(--app-text) !important;
+}
+
+.editorial-page .article-hero h2,
+.editorial-page .article-hero p,
+.editorial-page .article-toc h2,
+.editorial-page .article-toc a,
+.editorial-page .content-section h2,
+.editorial-page .content-section h3,
+.editorial-page .content-section p,
+.editorial-page .content-section li,
+.editorial-page .team-card h3,
+.editorial-page .team-card p,
+.editorial-page .article-callout h3,
+.editorial-page .article-callout p {
+    color: var(--app-text) !important;
+}

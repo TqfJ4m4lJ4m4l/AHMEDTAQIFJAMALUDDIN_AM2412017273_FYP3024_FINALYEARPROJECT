@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Neurodivergent</title>
+
+    <link rel="stylesheet" href="../styles/styleAboutUs.css?v=5">
+    <link rel="stylesheet" href="../styles/styleNav.css?v=3">
+    <link rel="stylesheet" href="../styles/styleSpefDrop.css?v=4">
+    <link rel="stylesheet" href="../styles/styleTheme.css">
+</head>
+<body>
+<header>
+    <h1>
+        <a href="HomePage.html" aria-label="Neurodivergent home">
+            <img src="../img/neurodivergence.png" alt="Neurodivergent">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <div class="us_button spef-dropdown">
+                <button
+                    class="spef-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="about-menu"
+                >
+                    ABOUT US <span aria-hidden="true">&#9662;</span>
+                </button>
+
+                <div class="spef-dropdown-menu" id="about-menu">
+                    <a href="AboutUs.html#our-team">Our Team</a>
+                    <a href="AboutUs.html#psychiatric-faculty">Psychiatric Faculty</a>
+                    <a href="AboutUs.html#why-this-department">Why This Department?</a>
+                </div>
+            </div>
+
+            <div class="neuro_button spef-dropdown">
+                <button
+                    class="spef-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="neuro-menu"
+                >
+                    NEURODIVERGENCE <span aria-hidden="true">&#9662;</span>
+                </button>
+
+                <div class="spef-dropdown-menu" id="neuro-menu">
+                    <a href="Autism.html#what-is-neurodivergence">What Is Neurodivergence?</a>
+                    <a href="Autism.html#traits-and-approaches">Traits and Approaches</a>
+                    <a href="Autism.html#medication-and-support">Medication and Support</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn" type="button" aria-label="Open account">
+                    <a href="../php/account.php">
+                        <img src="../img/login.png" alt="Account" width="45" height="45">
+                    </a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../php/account.php">Login</a>
+                </div>
+            </div>
+        </nav>
+    </h1>
+</header>
+
+<main class="editorial-page">
+    <section class="article-hero" aria-labelledby="about-title">
+        <p class="article-eyebrow">About our service</p>
+        <h2 id="about-title">A place for understanding and support</h2>
+        <p>
+            We aim to make it easier for neurodivergent people and their families
+            to find information and connect with support.
+        </p>
+    </section>
+
+    <div class="article-layout">
+        <nav class="article-toc" aria-label="About us contents">
+            <h2>On this page</h2>
+            <a href="#our-team">Our Team</a>
+            <a href="#psychiatric-faculty">Psychiatric Faculty</a>
+            <a href="#why-this-department">Why This Department?</a>
+        </nav>
+
+        <div class="article-content">
+            <section class="content-section" id="our-team">
+                <p class="section-kicker">The people behind the service</p>
+                <h2>Our Team</h2>
+                <p class="section-lead">
+                    Care works best when people are listened to and included in
+                    decisions about their own support.
+                </p>
+                <p>
+                    The team brings together professionals who support people
+                    with different needs and experiences. The information below
+                    should be updated with the department’s confirmed staff names
+                    and roles.
+                </p>
+
+                <div class="team-grid">
+                    <!-- Replace these sample profiles with the department's confirmed staff details. -->
+                    <article class="team-card">
+                        <span class="team-card-label">Child and family support</span>
+                        <h3>Dr. Anna Adams</h3>
+                        <p>
+                            Supports children and families with development,
+                            communication, and planning helpful next steps.
+                        </p>
+                    </article>
+
+                    <article class="team-card">
+                        <span class="team-card-label">Behavioural support</span>
+                        <h3>Dr. Amir Rahman</h3>
+                        <p>
+                            Works with individuals and families to understand
+                            needs and build supportive approaches.
+                        </p>
+                    </article>
+
+                    <article class="team-card">
+                        <span class="team-card-label">Adult support</span>
+                        <h3>Dr. Jessica Tan</h3>
+                        <p>
+                            Supports teenagers and adults with wellbeing,
+                            independence, and everyday goals.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" id="psychiatric-faculty">
+                <p class="section-kicker">Our wider setting</p>
+                <h2>Psychiatric Faculty</h2>
+                <p>
+                    The Psychiatric Faculty brings together services and
+                    professionals who support mental health and wellbeing.
+                    Neurodivergent people may also seek help with stress,
+                    anxiety, sleep, or other concerns, and their support should
+                    take their individual communication and sensory needs into
+                    account.
+                </p>
+            </section>
+
+            <section class="content-section" id="why-this-department">
+                <p class="section-kicker">Why this service exists</p>
+                <h2>Why This Department?</h2>
+                <p>
+                    Neurodivergent people can face barriers when services expect
+                    everyone to communicate, learn, or manage daily life in the
+                    same way. A dedicated service can help people discuss their
+                    needs and find appropriate support.
+                </p>
+                <div class="article-callout">
+                    <h3>Support should fit the person</h3>
+                    <p>
+                        Ask what helps, explain choices clearly, allow time to
+                        respond, and include the person in decisions about their
+                        care.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>PHONE NUMBER: 03-9145 5555 (OFFICE HOURS: 8:30AM - 6:00PM)</p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+</footer>
+<script src="../javascript/theme.js" defer></script>
+</body>
+</html>

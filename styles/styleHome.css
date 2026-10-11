@@ -1,0 +1,516 @@
+/* Base page setup */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #dedcee;
+    color: #262632;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* The shared navigation files style the buttons and dropdowns. */
+
+header {
+    padding: 10px;
+    background: #767aa5;
+    color: #fff;
+}
+
+/* Main homepage layout */
+
+.home-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keep the psychiatric image full-width without causing horizontal scrolling. */
+
+.home-hero {
+    width: 100%;
+    overflow: hidden;
+    background: #c7c7de;
+}
+
+.psych_disp {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 38vw, 560px);
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Content below the hero */
+
+.home-content {
+    width: min(1240px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 42px 0 64px;
+}
+
+.home-eyebrow {
+    margin: 0 0 10px;
+    color: #655e9e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+/* Summary area inspired by the supplied homepage concept */
+
+.home-introduction {
+    display: grid;
+    grid-template-columns: minmax(270px, 0.85fr) minmax(0, 1.15fr);
+    column-gap: clamp(60px, 8vw, 110px);
+    row-gap: 26px;
+    align-items: center;
+    margin-bottom: 58px;
+}
+
+.home-brand-card {
+    padding: clamp(24px, 4vw, 42px);
+    border-radius: 20px;
+    background: #8178d1;
+    color: #fff;
+}
+
+.home-brand-card .home-eyebrow {
+    color: #efedff;
+}
+
+.home-brand-card h2 {
+    margin: 0;
+    font-size: clamp(25px, 3vw, 37px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.home-association-label {
+    margin: 24px 0 10px;
+    color: #f1efff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.home-partner-logos {
+    display: block;
+    width: min(100%, 360px);
+    height: auto;
+    object-fit: contain;
+}
+
+.home-statement {
+    padding: 10px 0;
+}
+
+.home-statement h2 {
+    max-width: 18ch;
+    margin: 0;
+    color: #292a36;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.home-summary {
+    grid-column: 1 / -1;
+    max-width: 92ch;
+    padding: 22px 26px;
+    border-left: 5px solid #8178d1;
+    border-radius: 0 12px 12px 0;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.home-summary p {
+    margin: 0;
+    font-size: clamp(17px, 1.6vw, 20px);
+}
+
+/* Reusable section heading */
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading .home-eyebrow {
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #292a36;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.25;
+}
+
+/* Static overview cards */
+
+.home-overview {
+    margin-bottom: 58px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.overview-card {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #d4d3e1;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(39, 39, 56, 0.06);
+}
+
+.overview-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #efedff;
+    color: #655e9e;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.overview-card h3 {
+    margin: 0 0 8px;
+    color: #292a36;
+    font-size: 21px;
+}
+
+.overview-card p {
+    margin: 0;
+    color: #555968;
+}
+
+/* Staff activity feature */
+
+.home-feature {
+    margin-bottom: 58px;
+}
+
+.staff-feature-card {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(22px, 4vw, 44px);
+    align-items: center;
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid #d4d3e1;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(39, 39, 56, 0.06);
+}
+
+.staff-feature-image {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #f0eff7;
+}
+
+.staff-feature-image img {
+    display: block;
+    width: min(100%, 440px);
+    max-height: 650px;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.feature-label {
+    margin: 0 0 8px;
+    color: #655e9e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.staff-feature-copy h3 {
+    margin: 0 0 12px;
+    color: #292a36;
+    font-size: clamp(22px, 2.5vw, 30px);
+    line-height: 1.25;
+}
+
+.staff-feature-copy p {
+    margin: 0 0 14px;
+    color: #555968;
+}
+
+.staff-feature-copy .feature-note {
+    margin: 20px 0 0;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #f0eff7;
+    color: #525268;
+    font-size: 14px;
+}
+
+/* Location section */
+
+.home-location {
+    margin-bottom: 0;
+}
+
+.location-card {
+    overflow: hidden;
+    border: 1px solid #d4d3e1;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(39, 39, 56, 0.08);
+}
+
+.location-map {
+    display: flex;
+    justify-content: center;
+    padding: clamp(14px, 2.5vw, 28px);
+    background: #f0eff7;
+}
+
+.location-map img {
+    display: block;
+    width: 100%;
+    max-height: 620px;
+    border-radius: 10px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.location-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+    gap: 10px 32px;
+    padding: clamp(22px, 4vw, 38px);
+}
+
+.location-label {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #655e9e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.location-hospital {
+    grid-column: 1 / -1;
+    margin: 0 0 12px;
+    font-size: clamp(23px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.location-hospital a {
+    color: #34305f;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.location-hospital a:hover {
+    color: #655e9e;
+}
+
+.location-contact-list {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+}
+
+.location-contact-list > div {
+    min-width: 0;
+}
+
+.location-contact-list dt {
+    margin-bottom: 4px;
+    color: #4a4c59;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.location-contact-list dd {
+    margin: 0;
+    color: #555968;
+    overflow-wrap: anywhere;
+}
+
+.location-contact-list a,
+.location-source a {
+    color: #34305f;
+    text-underline-offset: 3px;
+}
+
+.location-source {
+    align-self: end;
+    margin: 0;
+    color: #666b78;
+    font-size: 13px;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 130px;
+    margin-top: 0;
+    padding: 20px 28px;
+    background: #bebcd6;
+}
+
+.footer-contact {
+    flex: 1 1 auto;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: #52667c;
+    font-size: small;
+    font-weight: bold;
+}
+
+.footer-logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-end;
+    width: min(320px, 28vw);
+}
+
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tablet layout */
+
+@media (max-width: 800px) {
+    .home-introduction {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .home-summary {
+        grid-column: auto;
+    }
+
+    .home-statement h2 {
+        max-width: 24ch;
+    }
+
+    .overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .staff-feature-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .location-details {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .location-label,
+    .location-hospital {
+        grid-column: auto;
+    }
+
+    .location-source {
+        margin-top: 10px;
+    }
+
+    .footer-version {
+        position: static;
+        transform: none;
+    }
+}
+
+/* Phone layout */
+
+@media (max-width: 560px) {
+    .psych_disp {
+        height: 250px;
+        object-position: center;
+    }
+
+    .home-content {
+        width: calc(100% - 24px);
+        padding: 28px 0 40px;
+    }
+
+    .home-brand-card {
+        padding: 24px;
+    }
+
+    .overview-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .staff-feature-card {
+        padding: 16px;
+    }
+
+    .location-details {
+        padding: 22px 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .footer-contact {
+        margin-top: 0;
+    }
+
+    .footer-logo {
+        width: min(320px, 100%);
+    }
+}
+
+/* Avoid smooth scrolling for users who prefer reduced motion. */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

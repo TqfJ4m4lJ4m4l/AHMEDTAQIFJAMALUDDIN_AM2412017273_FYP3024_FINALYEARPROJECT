@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurodivergent (logged in) - Booking</title>
+
+    <link rel="stylesheet" href="../styles/styleBook.css">
+</head>
+
+<body>
+
+<header>
+<h1>
+<a href="HomePage.html">
+    <img src="../img/neurodivergence.png" alt="Login Page" width="250">
+</a>
+
+
+
+<nav>
+  <div class="report_button">
+    <button class="Report" style="background-color: red;">
+      <a href="Report.html" style="font-size: larger;">REPORT</a>
+    </button>
+  </div>
+ <div class="us_button">
+  <button class="AboutUs" style="margin: auto;">
+   <a href="AboutUs.html" style="font-size: larger;">ABOUT US</a>
+  </button>
+ </div>
+
+<div class="neuro_button">
+  <button class="Neurodivergent">
+   <a href="Autism.html" style="font-size: larger;">NEURODIVERGENT</a>
+  </button>
+ </div>
+
+ <div class="appointment_button">
+  <button class="appointments">
+<a href="AutismBooker.php" style="font-size: larger;">APPOINTMENTS</a>
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropdown-btn">
+     <a href= "LoginPage.html"> <img src="../img/login.png" alt="Login Page" width="70" height="70"></a>
+</button>
+<div class="dropdown-content">
+      <a href="Updates.html">Updates</a>
+      <a href="#settings">History</a>
+      <a href="Prescriptions.html">Prescriptions</a>
+      <a href="#logout">Log Out</a>
+    </div>
+  </div>
+
+</a>
+
+</nav>
+
+</h1>
+
+</header>
+
+
+<main>
+
+    <form class="book_Disp" id="accountForm" action="../php/booking.php" method="POST">
+
+        <div class="book-header">
+
+            <div class="booking-bigtext">
+                BOOKING APPOINTMENT:
+            </div>
+
+            <input
+                type="text"
+                id="accountID"
+                name="accountID"
+                value="ACC001"
+                readonly
+            >
+
+        </div>
+
+
+        <div class="book-content">
+
+
+            <!-- USER INFORMATION -->
+
+            <div class="book-column">
+
+                <div class="user_ID">
+
+                    <div class="form-row">
+
+                        <label for="userID">
+                            ID:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userID"
+                            name="userID"
+                            placeholder="Enter your ID"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="user_NameAndEmail">
+
+                    <div class="form-row">
+
+                        <label for="userName">
+                            NAME:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userName"
+                            name="userName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="email">
+                            EMAIL:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- DOCTOR -->
+
+            <div class="book-column">
+
+                <div class="book_Doctor">
+
+                    <div class="form-row">
+
+                        <label for="doctor">
+                            DOCTOR:
+                        </label>
+
+                        <select
+                            id="doctor"
+                            name="doctor"
+                            required
+                        >
+
+                            <option value="">
+                                Select Doctor
+                            </option>
+
+                            <option value="BrHd">
+                                Dr. Bryan Hodukavich
+                            </option>
+
+                            <option value="AnAd">
+                                Dr. Anna Adams
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATE AND MEDIA -->
+
+            <div class="book-column">
+
+                <div class="book_DateAndMedia">
+
+                    <div class="form-row">
+
+                        <label for="bookingDate">
+                            DATE:
+                        </label>
+
+                        <input
+                            type="date"
+                            id="bookingDate"
+                            name="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <label for="media">
+                            MEDIA:
+                        </label>
+
+                        <select
+                            id="media"
+                            name="media"
+                            required
+                        >
+
+                            <option value="">
+                                Select Media
+                            </option>
+
+                            <option value="Physical">
+                                Physical
+                            </option>
+
+                            <option value="Non-verbal">
+                                Non-verbal
+                            </option>
+
+                            <option value="Digital">
+                                Digital
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="descBook">
+
+                <div class="form-row">
+
+                    <label for="descriptionBooking">
+                        DESCRIPTIONS:
+                    </label>
+
+                    <textarea
+                        id="descriptionBooking"
+                        name="description"
+                        placeholder="Enter your booking description..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM -->
+
+            <div class="confirm-container">
+
+                <button
+                    type="submit"
+                    id="confirmButton"
+                >
+                    CONFIRM
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+</main>
+
+<footer>
+
+    <div class="footer-contact">
+        <p>CONTACT US AT:</p>
+        <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+        <p>
+            PHONE NUMBER: 03-9145 5555
+            (OFFICE HOURS: 8:30AM - 6:00PM)
+        </p>
+    </div>
+
+    <div class="footer-version">
+        <p>VERSION: 1.0.2</p>
+    </div>
+
+    <div class="footer-logo">
+        <img src="../img/hctm.png" alt="HCTM Logo">
+    </div>
+
+</footer>
+
+</body>
+
+</html><form action="../php/booking.php" method="POST">
+
+</form>

@@ -1,0 +1,12 @@
+
+.psych_disp {
+    display: block;
+
+    width: 100vw;
+    height: auto;
+
+    object-fit: cover;
+
+    margin-top: -40px;
+    margin-left: calc(50% - 50vw);
+}

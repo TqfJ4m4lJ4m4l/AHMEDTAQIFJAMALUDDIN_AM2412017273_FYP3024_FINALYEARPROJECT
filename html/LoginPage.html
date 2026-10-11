@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="../styles/styleLogin.css">
+    <link rel="stylesheet" href="../styles/styleNav.css?v=3">
+    <link rel="stylesheet" href="../styles/styleSpefDrop.css?v=4">
+    <link rel="stylesheet" href="../styles/styleTheme.css">
+
+    <style>
+        .auth-toast[hidden] {
+            display: none;
+        }
+
+        .auth-toast {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: min(420px, calc(100vw - 48px));
+            padding: 16px 18px;
+            color: #702b32;
+            background: #fff0f0;
+            border: 1px solid #d98b94;
+            border-left: 6px solid #b83b48;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .auth-toast--success {
+            color: #205b3b;
+            background: #edf8f1;
+            border-color: #8bc5a2;
+            border-left-color: #318455;
+        }
+
+        .auth-toast-message {
+            flex: 1;
+        }
+
+        .auth-toast-close {
+            flex: 0 0 auto;
+            padding: 2px 8px;
+            color: inherit;
+            background: transparent;
+            border: 0;
+            border-radius: 6px;
+            font-size: 26px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .auth-toast-close:hover,
+        .auth-toast-close:focus-visible {
+            background: rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="HomePage.html">
+                <img src="../img/neurodivergence.png" alt="Neurodivergence" width="250">
+            </a>
+
+            <nav>
+                <div class="us_button spef-dropdown">
+                    <button
+                        class="spef-dropdown-trigger"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="about-menu"
+                    >
+                        ABOUT US <span aria-hidden="true">▾</span>
+                    </button>
+
+                    <div class="spef-dropdown-menu" id="about-menu">
+                        <a href="AboutUs.html#our-team">Our Team</a>
+                        <a href="AboutUs.html#psychiatric-faculty">Psychiatric Faculty</a>
+                        <a href="AboutUs.html#why-this-department">Why This Department?</a>
+                    </div>
+                </div>
+
+                <div class="neuro_button spef-dropdown">
+                    <button
+                        class="spef-dropdown-trigger"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="neuro-menu"
+                    >
+                        NEURODIVERGENCE <span aria-hidden="true">▾</span>
+                    </button>
+
+                    <div class="spef-dropdown-menu" id="neuro-menu">
+                        <a href="Autism.html#what-is-neurodivergence">What is Neurodivergence?</a>
+                        <a href="Autism.html#traits-and-approaches">Traits and Approaches</a>
+                        <a href="Autism.html#medication-and-support">Medication and Support</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn" type="button">
+                        <a href="../php/account.php">
+                            <img src="../img/login.png" alt="Account" width="70" height="70">
+                        </a>
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="../php/account.php">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-box active" id="login-form">
+                <h3>Login</h3>
+
+                <div
+                    id="login-message"
+                    class="auth-toast"
+                    role="alert"
+                    aria-live="assertive"
+                    hidden
+                >
+                    <span class="auth-toast-message"></span>
+                    <button
+                        class="auth-toast-close"
+                        type="button"
+                        aria-label="Dismiss notification"
+                    >&times;</button>
+                </div>
+
+                <form action="../php/login.php" method="POST">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <p>
+                    Don't have an account?
+                    <a href="SignUpPage.html">Sign Up</a>
+                </p>
+            </div>
+
+            <div class="Announcement Board">
+                <img
+                    src="../img/CommunityPoster.jpeg"
+                    alt="Community Announcement"
+                >
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>CONTACT US AT:</p>
+            <p>EMAIL: prohukm@hctm.ukm.edu.my</p>
+            <p>
+                PHONE NUMBER: 03-9145 5555
+                (OFFICE HOURS: 8:30AM - 6:00PM)
+            </p>
+        </div>
+
+        <div class="footer-version">
+            <p>VERSION: 1.0.2</p>
+        </div>
+
+        <div class="footer-logo">
+            <img src="../img/hctm.png" alt="HCTM Logo">
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".spef-dropdown-trigger").forEach((trigger) => {
+            trigger.addEventListener("click", () => {
+                const group = trigger.closest(".spef-dropdown");
+                const willOpen = !group.classList.contains("is-open");
+
+                document.querySelectorAll(".spef-dropdown.is-open").forEach((openGroup) => {
+                    openGroup.classList.remove("is-open");
+                    openGroup.querySelector(".spef-dropdown-trigger")
+                        .setAttribute("aria-expanded", "false");
+                });
+
+                group.classList.toggle("is-open", willOpen);
+                trigger.setAttribute("aria-expanded", String(willOpen));
+            });
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".spef-dropdown")) {
+                document.querySelectorAll(".spef-dropdown.is-open").forEach((group) => {
+                    group.classList.remove("is-open");
+                    group.querySelector(".spef-dropdown-trigger")
+                        .setAttribute("aria-expanded", "false");
+                });
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                document.querySelectorAll(".spef-dropdown.is-open").forEach((group) => {
+                    group.classList.remove("is-open");
+
+                    const trigger = group.querySelector(".spef-dropdown-trigger");
+                    trigger.setAttribute("aria-expanded", "false");
+                    trigger.focus();
+                });
+            }
+        });
+    </script>
+
+    <script>
+        const toast = document.getElementById("login-message");
+
+        if (toast) {
+            const message = toast.querySelector(".auth-toast-message");
+            const params = new URLSearchParams(window.location.search);
+
+            const loginErrors = {
+                missing: "Enter your email and password.",
+                invalid: "The email or password is incorrect.",
+                account_setup: "This account is not fully set up. Please contact support.",
+                service: "Login is temporarily unavailable. Please try again."
+            };
+
+            const errorCode = params.get("error");
+            let notificationText = "";
+
+            if (errorCode) {
+                notificationText = loginErrors[errorCode] || "";
+            } else if (params.get("registered") === "1") {
+                notificationText = "Your account was created. You can now log in.";
+                toast.classList.add("auth-toast--success");
+            }
+
+            if (notificationText) {
+                message.textContent = notificationText;
+                toast.hidden = false;
+            }
+
+            toast.querySelector(".auth-toast-close").addEventListener("click", () => {
+                toast.remove();
+
+                const cleanUrl = new URL(window.location.href);
+                cleanUrl.searchParams.delete("error");
+                cleanUrl.searchParams.delete("registered");
+                history.replaceState({}, "", cleanUrl);
+            });
+        }
+    </script>
+    <script src="../javascript/theme.js" defer></script>
+</body>
+</html>

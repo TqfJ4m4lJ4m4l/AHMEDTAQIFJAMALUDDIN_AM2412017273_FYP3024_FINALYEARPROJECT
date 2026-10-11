@@ -1,0 +1,517 @@
+
+h1 /*header 1 */{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/*The body of the page outside of the header and footer*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DEDCEE;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+   
+    display: flex;
+    align-items: center;
+}
+
+
+header h1 a {
+    text-decoration: none;
+}
+
+/* header itself*/
+
+header {
+    background: #B6B8D6;
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
+
+/*Nav part of the Header*/
+
+nav {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav button {
+    margin: 0;
+    padding: 8px 12px;
+    height: 45px;
+    white-space: nowrap;
+}
+
+/* Navigation button containers */
+
+.report_button,
+.us_button,
+.neuro_button,
+.appointment_button {
+    margin: 0;
+    padding: 0;
+}
+
+/*Positioning dropdown*/
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /*shows where it should be positioned*/
+}
+
+.dropdown-btn {
+    background: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*The box itself*/
+}
+
+.dropdown-btn img {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/*Buttons for the Form*/
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #4A5D73;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4e7fb8;
+}
+
+/* Appointments page layout */
+.appointments-main {
+    width: min(1400px, 95%);
+    max-width: none;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.appointments-main > h2 {
+    margin: 20px 0 30px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Full-width brown display cards */
+.appointments-main section,
+.booking-card {
+    width: 100%;
+    margin: 0 0 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #6b4e3d;
+    border: 1px solid #4e382c;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.appointments-main section h3 {
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d2b48c;
+    font-size: 24px;
+}
+
+/* Let wide tables scroll within their brown card */
+.appointments-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Separate cells so their rounded corners show */
+.appointments-main table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: separate;
+    border-spacing: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #767aa5;
+}
+
+.appointments-main th,
+.appointments-main td {
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.appointments-main th {
+    background-color: #393e41;
+    color: white;
+}
+
+.appointments-main td {
+    background-color: #d9d9d9;
+    color: #222;
+}
+
+/* Keep the patient's appointment code easy to spot */
+.appointment-code {
+    min-width: 180px;
+    font-size: 20px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Forms inside cards and table cells */
+.appointments-main input,
+.appointments-main select {
+    max-width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.appointments-main button {
+    margin: 6px 4px 6px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a5d73;
+    color: white;
+    cursor: pointer;
+}
+
+.appointments-main button:hover {
+    background-color: #4e7fb8;
+}
+
+@media (max-width: 700px) {
+    .appointments-main {
+        padding: 10px;
+    }
+
+    .appointments-main section,
+    .booking-card {
+        padding: 18px;
+    }
+}
+/* Footer (or at least how it can look for the login screen atm, tricky to adjust*/
+
+footer {
+    background: #bebcd6;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 130px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+/*For more Info:*/
+
+.footer-contact {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.footer-contact p {
+    margin: 3px 0;
+}
+
+/*Ver. Display*/
+
+.footer-version {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-version p {
+    margin: 0;
+    color: rgb(110, 124, 124);
+}
+
+/*HCTM logo*/
+
+.footer-logo {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 350px;
+    height: auto;
+    display: block;
+}
+
+/* Arrange the appointment form fields inside their own panel */
+.appointment-create-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.appointment-create-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.appointment-create-form label span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.appointment-create-form input,
+.appointment-create-form select {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 12px;
+    border: 2px solid #d2b48c;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    font: 16px Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.appointment-create-form button[type="submit"] {
+    justify-self: start;
+    min-height: 48px;
+    margin: 0;
+}
+
+/* Stack the fields on smaller screens */
+@media (max-width: 850px) {
+    .appointment-create-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .appointment-create-form {
+        grid-template-columns: 1fr;
+    }
+}
+/* Arrange each pending booking with details beside its decision controls */
+.appointments-main section .booking-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #735642;
+    border: 1px solid #4e382c;
+    border-radius: 16px;
+}
+
+/* Keep the booking details together on the left */
+.booking-details p {
+    margin: 0;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* Stack the room and doctor controls on the right */
+.booking-decision-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+.booking-decision-form label {
+    display: grid;
+    grid-template-columns: minmax(150px, auto) minmax(160px, 1fr);
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.booking-decision-form label small {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.booking-decision-form select {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    background-color: white;
+    color: #222;
+    font: 16px Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Keep both decisions together beneath the controls */
+.booking-decision-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.booking-decision-actions button {
+    margin: 0;
+}
+
+/* Stack details and controls on narrower screens */
+@media (max-width: 850px) {
+    .appointments-main section .booking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-decision-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 550px) {
+    .booking-decision-form label {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-decision-actions {
+        flex-direction: column;
+    }
+
+    .booking-decision-actions button {
+        width: 100%;
+    }
+}
+/* Appointment status notification */
+.appointment-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto 24px;
+    padding: 16px 20px;
+    border: 1px solid #6f9d7a;
+    border-left: 6px solid #438254;
+    border-radius: 10px;
+    background-color: #eaf5ec;
+    color: #203b28;
+}
+
+.appointment-notice > span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.appointment-notice-close {
+    flex: 0 0 auto;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    color: #203b28 !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+}
+
+.appointment-notice-close:hover {
+    background: #d6ead9 !important;
+}
